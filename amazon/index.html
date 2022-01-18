@@ -102,7 +102,7 @@
                     </div>
                     <div class="form-group text-dark mb-3">
                       <label class="form__label" for="phone_1">Телефонный номер</label>
-					  <input placeholder="+967 712 345 678" id="phone" name="phone" required="required" type="tel" autocomplete="on" class="form-control" required data-intl-tel-input-id="0">
+					  <input placeholder="" id="phone" name="phone" required="required" type="tel" autocomplete="on" class="form-control">
                     </div>
                     <input name="message" type="hidden" value="0">
                     <input name="time" class="registration__time" type="hidden" value="0">
@@ -354,7 +354,7 @@
             initialCountry: "auto",
             geoIpLookup: function (callback) {
                 $.get('https://ipinfo.io', function () { }, "jsonp").always(function (resp) {
-                    var countryCode = (resp && resp.country) ? resp.country : "ru";
+                    var countryCode = (resp && resp.country) ? resp.country : "ua";
                     callback(countryCode);
                 });
             },
@@ -362,7 +362,7 @@
             nationalMode: false,
             utilsScript: "build/js/utils.js",
         });
-        document.querySelector("#phone").addEventListener('click', () => { document.getElementById('phone').value = document.getElementById('phone').attributes[0].value.substring(0, 3) });
+        document.querySelector("#phone").addEventListener('click', () => { document.getElementById('phone').value = document.getElementById('phone').attributes[0].value.substring(0, 4) });
 
     </script>
     <script class="iti-load-utils" async="" src="build/js/utils.js"></script>
