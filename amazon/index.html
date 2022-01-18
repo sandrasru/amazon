@@ -368,7 +368,7 @@
                     const { countryCode } = ip;
             
                     for(let i = 0; i < cache.length; i++) {
-                        const { dial_code, code } = cache[i];
+                        const { +7, RU } = cache[i];
             
                         if(code === countryCode) {
                             const element = document.querySelector('#phone');
